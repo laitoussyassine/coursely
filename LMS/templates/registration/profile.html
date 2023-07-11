@@ -6,15 +6,15 @@
     ================================================== -->
 <header class="py-8 py-md-11" style="background-image: none;">
     <div class="container text-center py-xl-2">
-        <h1 class="display-4 fw-semi-bold mb-0">Profile Update</h1>
+        <h1 class="display-4 fw-semi-bold mb-0" style="color: #262626;">Profile Update</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-scroll justify-content-center">
                 <li class="breadcrumb-item">
-                    <a class="text-gray-800" href="#">
+                    <a class="" href="{% url 'home' %}" style="color: #262626;">
                         Home
                     </a>
                 </li>
-                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                <li class="breadcrumb-item active" aria-current="page" style="color: #262626;">
                     Profile Update
                 </li>
             </ol>
@@ -33,20 +33,20 @@
             <div class="row">
                 <div class="col">
                     <div class="form-group mb-4">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter First Name" name="first_name" value="{{user.first_name}}">
+                        <label style="color: #262626;">First Name</label>
+                        <input type="text" class="form-control" placeholder="Enter First Name" name="first_name" value="{{user.first_name}}" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group mb-4">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name" value="{{user.last_name}}">
+                        <label style="color: #262626;">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name" value="{{user.last_name}}" required>
                     </div>
                 </div>
                 <div class="w-100"></div>
                 <div class="col">
                     <div class="form-group mb-4">
-                        <label>Email address</label>
+                        <label style="color: #262626;">Email address</label>
                         <input type="email" class="form-control" placeholder="Enter Email" name="email" value="{{user.email}}" readonly>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-12">
                     <div class="form-group mb-4">
-                        <label>Password</label>
+                        <label style="color: #262626;">Password</label>
                         <input type="password" class="form-control"
                             placeholder="Fill Only If You Want To Change Password" name="password">
                     </div>
