@@ -6,7 +6,7 @@
 <section class="py-6 py-md-10 bg-white">
     <div class="container container-wd">
         {% include 'components/msg.html' %}
-        <div class="bg-gradient-1 rounded-lg py-md-9 py-8 px-md-8 px-5">
+        <div class=" rounded-lg py-md-9 py-8 px-md-8 px-5" style=" background: linear-gradient(135deg, #319049 0%, #61CD7C 100%); border-radius: 24px;">
             <div class="row align-items-center">
                 <div class="col-xl-7 mb-4 mb-xl-0 text-capitalize">
                     <h1 class="text-white mb-3">Subscribe our newsletter</h1>
@@ -18,14 +18,14 @@
                     <form method="post" action="{% url 'subscribe' %}">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <div class="input-group d-block d-md-flex bg-white p-1 rounded-lg">
+                        <div class="input-group d-block d-md-flex bg-white p-1 " style="border-radius: 16px;">
                             <input type="text"
-                                class="form-control w-100 w-md-auto form-control-sm rounded-lg border-0 placeholder-1"
+                                class="form-control w-100 w-md-auto form-control-sm border-0 placeholder-1"
                                 placeholder="Enter your email" aria-label="Enter your email"
-                                aria-describedby="button-addon2" name="email">
+                                aria-describedby="button-addon2" name="email" >
                             <div class="input-group-append ms-0">
-                                <button class="btn btn-sm btn-dark w-100 w-md-auto btn-wide rounded-lg border-0"
-                                    type="submit" id="button-addon2">Subscribe</button>
+                                <button class="btn btn-sm text-white w-100 w-md-auto btn-wide  border-0"
+                                    type="submit" id="button-addon2" style="background: #236634; border-radius: 42px; ">Subscribe</button>
                             </div>
                         </div>
                     </form>                    

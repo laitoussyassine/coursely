@@ -33,7 +33,7 @@
 </script>
 <!-- PAGE TITLE
     ================================================== -->
-<header class="py-8 py-md-11" style="background-image: none;">
+<!-- <header class="py-8 py-md-11" style="background-image: none;">
     <div class="container text-center py-xl-2">
         <h1 class="display-4 fw-semi-bold mb-0">Courses</h1>
         <nav aria-label="breadcrumb">
@@ -49,11 +49,22 @@
             </ol>
         </nav>
     </div>
-    <!-- Img -->
+    
     <img class="d-none img-fluid" src="...html" alt="...">
-</header>
+</header> -->
 
 
+<div class="container my-5" style="background-color: #BFDDC7; border-radius: 20px;">
+    <div class="row p-3" style="border-radius: 50px;">
+      <div class="col-md-6 d-flex justify-content-start align-items-center" >
+        <h1 style="font-size: 48px; color: #236634;">Coursely Courses
+          For All Standards</h1>
+      </div>
+      <div class="col-md-6 mt-3 mb-1">
+        <img src="{% static 'assets/img/home_about/Image _course_page(1).png' %}" class="img-fluid" alt="Right Column">
+      </div>
+    </div>
+  </div>
 <!-- CONTROL BAR
     ================================================== -->
 <div class="container mb-6 mb-xl-8 z-index-2">
@@ -90,9 +101,9 @@
                     <div id="coursefilter1">
                         <h4 class="mb-0">
                             <button
-                                class="p-6 text-dark fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
+                                class="p-6  fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#coursefiltercollapse1"
-                                aria-expanded="true" aria-controls="coursefiltercollapse1">
+                                aria-expanded="true" aria-controls="coursefiltercollapse1" style="color: #000000;">
                                 Category
                                 <span class="ms-auto text-dark d-flex">
                                     <!-- Icon -->
@@ -130,9 +141,9 @@
                     <div id="coursefilter3">
                         <h4 class="mb-0">
                             <button
-                                class="p-6 text-dark fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
+                                class="p-6  fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#coursefiltercollapse3"
-                                aria-expanded="true" aria-controls="coursefiltercollapse3">
+                                aria-expanded="true" aria-controls="coursefiltercollapse3" style="color: #000000;">
                                 Price
                                 <span class="ms-auto text-dark d-flex">
                                     <!-- Icon -->
@@ -179,9 +190,9 @@
                     <div id="coursefilter4">
                         <h4 class="mb-0">
                             <button
-                                class="p-6 text-dark fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
+                                class="p-6  fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#coursefiltercollapse4"
-                                aria-expanded="true" aria-controls="coursefiltercollapse4">
+                                aria-expanded="true" aria-controls="coursefiltercollapse4" style="color: #000000;">
                                 Level
                                 <span class="ms-auto text-dark d-flex">
                                     <!-- Icon -->
@@ -222,9 +233,9 @@
                     <div id="coursefilter5">
                         <h4 class="mb-0">
                             <button
-                                class="p-6 text-dark fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
+                                class="p-6  fw-medium d-flex align-items-center collapse-accordion-toggle line-height-one"
                                 type="button" data-bs-toggle="collapse" data-bs-target="#coursefiltercollapse5"
-                                aria-expanded="true" aria-controls="coursefiltercollapse5">
+                                aria-expanded="true" aria-controls="coursefiltercollapse5" style="color: #000000;">
                                 Rating
                                 <span class="ms-auto text-dark d-flex">
                                     <!-- Icon -->
@@ -321,7 +332,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-primary btn-block mb-10">FILTER RESULTS</a>
+                <!-- <a href="#" class="btn btn-primary btn-block mb-10">FILTER RESULTS</a> -->
             </div>
         </div>
         
@@ -364,8 +375,8 @@
                             </a>
 
                             <span
-                                class="badge sk-fade-bottom badge-lg badge-primary badge-pill badge-float bottom-0 left-0 mb-4 ms-4 fw-bold">
-                                <span class="text-white text-uppercase fw-bold font-size-xs">Discount {{i.discount}}
+                                class="badge sk-fade-bottom badge-lg badge-pill badge-float bottom-0 left-0 mb-4 ms-4 fw-bold" style="background-color: #319049;">
+                                <span class="text-white text-uppercase fw-bold font-size-xs" >Discount {{i.discount}}
                                     %</span>
                             </span>
                         </div>
@@ -386,7 +397,7 @@
                             <!-- Heading -->
                             <div class="position-relative">
                                 <a href="{{i.get_absolute_url}}" class="d-block stretched-link">
-                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">{{i.title}}
+                                    <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2" style="color: #262626;">{{i.title}}
                                     </h4>
                                 </a>
 
@@ -442,12 +453,12 @@
                                     <!-- price -->
                                     {% if i.price == 0 %}
                                     <div class="col-auto px-2 text-right">
-                                        <ins class="h4 mb-0 d-block mb-lg-n1"><span class="badge badge-primary">Free</span></ins>
+                                        <ins class="h4 mb-0 d-block mb-lg-n1"><span class="badge" style="background-color: #319049;">Free</span></ins>
                                     </div>
                                     {% else %}
                                     <div class="col-auto px-2 text-right">
-                                        <del class="font-size-sm">$ {{i.price}}</del>
-                                        <ins class="h4 mb-0 d-block mb-lg-n1">$ {% discount_calculation i.price i.discount %}</ins>
+                                        <del class="font-size-sm" style="color: red;">$ {{i.price}}</del>
+                                        <ins class="h4 mb-0 d-block mb-lg-n1" style="color: #319049;">$ {% discount_calculation i.price i.discount %}</ins>
                                     </div>
                                     {% endif %}
                                 </div>

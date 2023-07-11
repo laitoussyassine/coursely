@@ -1,4 +1,13 @@
+{% block style %}
+<style>
+    .icon-link:hover i {
+  color: #319049;
+}
+
+</style>
+{% endblock %}
 {% load static %}
+
    <!-- FOOTER
     ================================================== -->
     <footer class="pt-8 pt-md-11 position-relative text-white" style="background: #319049;">
@@ -14,7 +23,7 @@
                 <div class="col-12 col-md-4 col-lg-4">
   
                     <!-- Brand -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{% url 'home' %}">
                         <img src="{% static 'assets/img/logo coursely logo white rgb.svg' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p">
 
                     </a>
@@ -35,23 +44,23 @@
                     <!-- Social -->
                     <ul class="list-unstyled list-inline list-social mb-4 mb-md-0 mx-n2 text-white-70 font-size-sm">
                         <li class="list-inline-item list-social-item">
-                            <a href="#" class="w-36 h-36 bg-white-hover rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="#" class="icon-link w-36 h-36 bg-white-hover rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fab fa-facebook-f" style="color: black;"></i>
                             </a>
                         </li>
                         <li class="list-inline-item list-social-item">
                             <a href="#" class="w-36 h-36 bg-white-hover rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-twitter" style="color: black;"></i>
                             </a>
                         </li>
                         <li class="list-inline-item list-social-item">
                             <a href="#" class="w-36 h-36 bg-white-hover rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-instagram" style="color: black;"></i>
                             </a>
                         </li>
                         <li class="list-inline-item list-social-item">
                             <a href="#" class="w-36 h-36 bg-white-hover rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="fab fa-linkedin-in"></i>
+                                <i class="fab fa-linkedin-in" style="color: black;"></i>
                             </a>
                         </li>
                     </ul>
@@ -85,43 +94,28 @@
                             <!-- List -->
                             <ul class="list-unstyled text-white font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
                                 <li class="mb-3">
-                                    <a href="about-v1.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Our Company
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="about-v2.html" class="text-reset">
+                                    <a href="{% url 'about_us' %}" class="text-reset">
                                         About Us
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="contact-us.html" class="text-reset">
+                                    <a href="{% url 'contact_us' %}" class="text-reset">
                                         Contact Us
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="contact-us.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Community
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="course-list-v1.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Student Perks
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="blog-grid-v1.html" class="text-reset">
-                                        Blog
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="pricing.html" class="text-reset">
-                                        Affiliate Program
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="contact-us.html" class="text-reset">
-                                        Careers
                                     </a>
                                 </li>
                             </ul>
@@ -157,17 +151,17 @@
                             <!-- List -->
                             <ul class="list-unstyled text-white font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
                                 <li class="mb-3">
-                                    <a href="course-list-v2.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         HTML
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="course-list-v2.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         CSS
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="course-list-v6.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Design
                                     </a>
                                 </li>
@@ -177,28 +171,13 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="course-list-v4.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Ruby
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="course-list-v1.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         PHP
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="course-list-v3.html" class="text-reset">
-                                        Android
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="course-list-v4.html" class="text-reset">
-                                        Development Tools
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="course-list-v6.html" class="text-reset">
-                                        Business
                                     </a>
                                 </li>
                             </ul>
@@ -234,33 +213,23 @@
                             <!-- List -->
                             <ul class="list-unstyled text-white font-size-sm-alone mb-0">
                                 <li class="mb-3">
-                                    <a href="lesson-single-v1.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Web Design
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="lesson-single-v2.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Web Development
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="lesson-single-v1.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Rails Development
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="lesson-single-v2.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         PHP Development
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="lesson-single-v1.html" class="text-reset">
-                                        Android Development
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="lesson-single-v2.html" class="text-reset">
-                                        Starting a Business
                                     </a>
                                 </li>
                             </ul>
@@ -296,22 +265,22 @@
                             <!-- List -->
                             <ul class="list-unstyled text-white font-size-sm-alone mb-0">
                                 <li class="mb-3">
-                                    <a href="docs/index.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Account
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="docs/index.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Manage Deliveries
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="docs/index.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Returns
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="docs/changelog.html" class="text-reset">
+                                    <a href="#" class="text-reset">
                                         Privacy Policy
                                     </a>
                                 </li>

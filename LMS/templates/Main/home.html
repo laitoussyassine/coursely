@@ -1019,8 +1019,8 @@ industry-valued expertise.</p>
                 <div class="col-xl-5">
                     <form method="post" action="{% url 'subscribe' %}">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <div class="input-group d-block d-md-flex bg-white p-1 " style="border-radius: 16px;">
+                        <div class="input-group d-block d-md-flex bg-white p-1" style="border-radius: 16px;">
+                            {{ form.as_p }}
                             <input type="text"
                                 class="form-control w-100 w-md-auto form-control-sm border-0 placeholder-1"
                                 placeholder="Enter your email" aria-label="Enter your email"

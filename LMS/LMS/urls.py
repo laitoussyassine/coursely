@@ -3,7 +3,7 @@ from django.urls import path,include
 from .import views,user_login
 from django.conf import settings
 from django.conf.urls.static import static 
-from .views import subscribe
+from .views import subscribe,add_review
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +26,9 @@ urlpatterns = [
     path('my-course',views.MY_COURSE,name='my-course'),
     path('verify_payment',views.VERIFY_PAYMENT,name='verify_payment'),
     path('course/watch-course/<slug:slug>/', views.WATCH_COURSE, name='watch_course'),
-    path('sub/subscribe/', views.subscribe, name='subscribe')
+    path('sub/subscribe/', views.subscribe, name='subscribe'),
+    path('course/<int:course_id>/add-review/', add_review, name='add_review'),
+
 
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 

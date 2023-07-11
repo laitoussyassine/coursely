@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import redirect,render,get_object_or_404
-from app.models import Categories,Course,Level,Video,UserCourse
+from app.models import Categories,Course,Level,Video,UserCourse,Review
 from django.template.loader import render_to_string
 # import json
 from django.http import JsonResponse
@@ -15,7 +15,11 @@ from time import time
 
 from django.shortcuts import render
 from django.core.mail import send_mail
-from app.forms import SubscriptionForm
+from app.forms import SubscriptionForm,ReviewForm
+
+
+ 
+
 
 # client = razorpay.Client(auth=(KEY_ID,KEY_SECRET))
 
@@ -230,4 +234,32 @@ def subscribe(request):
         form = SubscriptionForm()
 
     return render(request, 'sub/subscribe.html', {'form': form})
+
+
+
+
+
+
+
+def add_review(request, course_id):
+    course = Course.objects.get(id=course_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.course = course
+            review.user = request.user
+            review.save()
+
+            messages.success(request, 'Review added successfully.')
+            return redirect('watch_course', slug=course.slug)
+    else:
+        form = ReviewForm()
+
+    context = {
+        'course': course,
+        'form': form,
+    }
+    return render(request, 'course/course_details.html', context)
 
