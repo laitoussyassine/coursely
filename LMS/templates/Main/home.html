@@ -2,9 +2,43 @@
 {% block title %}Home{% endblock %}
 {% load static %}
 {% block style %}
-    <style>
+<style>
+    .us-item h5 {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        color: #242424;
+        
+    }
+    .us-item p {
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #242424;
+    }
+   
+    .us-item {
+        border-radius: 16px;
+        font-size: 18px;
+        font-family: Inter;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    
+    .us-item:hover  {
+        background: var(--gradient, linear-gradient(135deg, #319049 0%, #61CD7C 100%));
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        
+    }
+    .us-item:hover h5,
+.us-item:hover p {
+  color: #fff;
+}
 
-    </style>
+  </style>
 {% endblock %}
 {% block content %}
 {% load course_tags %}
@@ -626,46 +660,30 @@ industry-valued expertise.</p>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="why-choose-us-parent">
-                                <div class="p-3">
+                                <div class="p-3 us-item">
                                     <div class="mb-3 d-flex justify-content-center align-items-center" style="width: 70px;
                                             height: 70px; background-color: #EAF4ED; border-radius: 50%;">
                                         <img class="" alt="" src="{% static 'assets/img/home_about/everytime.svg' %}">
                                     </div>
-                                    <div class="professional-expert-team-parent">
-                                        <h5 class="professional-expert" style="color: #242424;
-                                            font-family: Lato;
-                                            font-size: 20px;
-                                            font-weight: 700;
-                                            line-height: 28px;">Professional Expert & Team</h5>
-                                        <div class="nisl-id-nascetur-container">
-                                            <span class="its-the-bright-container1">
-                                                <p class="its-the-bright" style="color: #525252;
-                                                font-family: Lato;
-                                                font-size: 15px;
-                                                font-weight: 400;
-                                                line-height: 20px;">Learn from industry professionals and our dedicated team of experts.</p>
+                                    <div class="">
+                                        <h5 class="">Professional Expert & Team</h5>
+                                        <div class="">
+                                            <span class="">
+                                                <p class="">Learn from industry professionals and our dedicated team of experts.</p>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-3">
+                                <div class="p-3 us-item">
                                     <div class="mb-3 d-flex justify-content-center align-items-center" style="width: 70px;
                                             height: 70px; background-color: #EAF4ED; border-radius: 50%;">
                                         <img class="" alt="" src="{% static 'assets/img/home_about/everytime.svg' %}">
                                     </div>
                                     <div class="professional-expert-team-parent">
-                                        <h5 class="professional-expert" style="color: #242424;
-                                            font-family: Lato;
-                                            font-size: 20px;
-                                            font-weight: 700;
-                                            line-height: 28px;">Free Webinar for Members</h5>
+                                        <h5 class="professional-expert" >Free Webinar for Members</h5>
                                         <div class="nisl-id-nascetur-container">
                                             <span class="its-the-bright-container1">
-                                                <p class="its-the-bright" style="color: #525252;
-                                                font-family: Lato;
-                                                font-size: 15px;
-                                                font-weight: 400;
-                                                line-height: 20px;">Enjoy exclusive free webinars as a valued member.</p>
+                                                <p class="its-the-bright" >Enjoy exclusive free webinars as a valued member.</p>
                                             </span>
                                         </div>
                                     </div>
@@ -676,47 +694,30 @@ industry-valued expertise.</p>
                         </div>
                         <div class="col-lg-6">
                             <div class="why-choose-us-parent">
-                                <div class="p-3 text-white" style="border-radius: 16px;
-                  background: var(--gradient, linear-gradient(135deg, #319049 0%, #61CD7C 100%));">
+                                <div class="p-3 us-item">
                                     <div class="mb-3 d-flex justify-content-center align-items-center" style="width: 70px;
                     height: 70px; background-color: #EAF4ED; border-radius: 50%;">
                                         <img class="" alt="" src="{% static 'assets/img/home_about/everytime.svg' %}">
                                     </div>
                                     <div class="professional-expert-team-parent">
-                                        <h5 class="text-white" style="
-                      font-family: Lato;
-                      font-size: 18px;
-                      font-weight: 700;
-                      line-height: 28px;">Everytime & Everywhere to Learn</h5>
+                                        <h5 class="">Everytime & Everywhere to Learn</h5>
                                         <div class="nisl-id-nascetur-container">
                                             <span class="its-the-bright-container1">
-                                                <p class="its-the-bright" style="
-                          font-family: Lato;
-                          font-size: 15px;
-                          font-weight: 400;
-                          line-height: 20px;">Access our courses anytime and anywhere to fit your schedule.</p>
+                                                <p class="its-the-bright">Access our courses anytime and anywhere to fit your schedule.</p>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="p-3">
+                                <div class="p-3 us-item">
                                     <div class="mb-3 d-flex justify-content-center align-items-center" style="width: 70px;
                     height: 70px; background-color: #EAF4ED; border-radius: 50%;">
                                         <img class="" alt="" src="{% static 'assets/img/home_about/everytime.svg' %}">
                                     </div>
                                     <div class="professional-expert-team-parent">
-                                        <h5 class="professional-expert" style="color: #242424;
-                      font-family: Lato;
-                      font-size: 20px;
-                      font-weight: 700;
-                      line-height: 28px;">24/7 Premium Support</h5>
+                                        <h5 class="professional-expert">24/7 Premium Support</h5>
                                         <div class="nisl-id-nascetur-container">
                                             <span class="its-the-bright-container1">
-                                                <p class="its-the-bright" style="color: #525252;
-                          font-family: Lato;
-                          font-size: 15px;
-                          font-weight: 400;
-                          line-height: 20px;">Receive round-the-clock premium support whenever you need assistance.</p>
+                                                <p class="its-the-bright">Receive round-the-clock premium support whenever you need assistance.</p>
                                             </span>
                                         </div>
                                     </div>

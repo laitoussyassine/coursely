@@ -48,7 +48,7 @@
 {% block content  %}
 
 
-<div class="header-section bg-white py-5 text-center">
+<div class="header-section bg-white py-5 text-center" style="margin-top: 50px;">
     <div class="container">
         <div class="content">
             <div class="heading-and-supporting-text">
@@ -65,10 +65,10 @@
 <!--  -->
 
 <!--  -->
-<div style="margin-bottom: 100px;" class="container my-5">
+<div style="margin-bottom: 100px; margin-top: 80px;" class="container">
     <div class="row">
       <div class="col-md-6">
-        <img class="image-icon img-fluid" alt="" src="{% static 'assets/img/home_about/Image (1).svg' %}">
+        <img class="image-icon img-fluid" alt="" style="border-radius: 32px;" src="{% static 'assets/img/home_about/Image (1).svg' %}">
       </div>
       <div class="col-md-6 mt-4">
         <div class="content">
@@ -81,30 +81,27 @@
             </div>
           </div>
           <div class="content1 my-5">
-            <div class="row mt-5 " id="metricItemsContainer" >
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <div class="my-5">
-                    <div class="mb-5">
-                      <h1 style="color: #2D8342; font-weight: 800;">400+</h1>
-                      <p style="color: #525252;">Projects completed</p>
-                    </div>
-                    <div class="mb-5">
-                      <h1 style="color: #2D8342; font-weight: 800;">10k</h1>
-                      <p style="color: #525252;">Global downloads</p>
-                    </div>
+            <div class="row mt-5" id="metricItemsContainer">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="my-5">
+                  <div class="mb-5">
+                    <h1 id="projectsCount" style="color: #2D8342; font-weight: 800;">0</h1>
+                    <p style="color: #525252;">Projects completed</p>
                   </div>
-                  <div class="my-5">
-                    <div class="mb-5">
-                      <h1 style="color: #2D8342; font-weight: 800;"> 600%</h1>
-                      <p style="color: #525252;">Return on investment </p>
-                    </div>
-                    <div class="mb-5">
-                      <h1 style="color: #2D8342; font-weight: 800; ">200+</h1>
-                      <p style="color: #525252;">5-star reviews</p>
-                    </div>
+                  <div class="mb-5">
+                    <h1 id="downloadsCount" style="color: #2D8342; font-weight: 800;">0K</h1>
+                    <p style="color: #525252;">Global downloads</p>
                   </div>
                 </div>
-                  
+                <div class="my-5">
+                  <div class="mb-5">
+                    <h1 id="roiCount" style="color: #2D8342; font-weight: 800;">0%</h1>
+                    <p style="color: #525252;">Return on investment</p>
+                  </div>
+                  <div class="mb-5">
+                    <h1 id="reviewsCount" style="color: #2D8342; font-weight: 800;">0</h1>
+                    <p style="color: #525252;">5-star reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -115,11 +112,11 @@
   </div>
 
   <!--  -->
-  <div style="margin-bottom: 150px;" class="container mt-5">
-    <div class="header-section bg-white py-5 text-center">
+  <div  class="container py-5">
+    <div class="header-section bg-white text-center">
         <div class="container">
             <div class="content">
-                <div class="heading-and-supporting-text">
+                <div class="heading-and-supporting-text ">
                     <div class="heading-and-subheading">
                         <p style="color: #319049; font-weight: 600; font-size: 18px;" class="subheading">We are here</p>
                         <h2 class="" style="font-weight: 800; font-size: 35px; color: #262626;">Learn from Our Knowledgeable Instructors</h2>
@@ -132,7 +129,7 @@
             </div>
         </div>
     </div>
-    <div class="row team-member-wrap-parent  text-center mb-5">
+    <div class="row team-member-wrap-parent  text-center " style="margin-top: 60px; margin-bottom: 60px;">
       <div class="col-md-6 col-lg-4 col-xl-3 py-3">
         <div class="d-flex justify-content-center align-items-center">
             <div class="team-member-wrap py-3 px-2" style="border-radius: 16px; background-color: #f9fafb;">
@@ -339,9 +336,9 @@
       <!-- Repeat the above code for other team members -->
     </div>
   </div>
-  <!--  -->
+  <!-- are you a teacher -->
 
-  <div class="container content  p-5 rounded" style="background-color: #eaf4ed; margin-bottom: 100px;">
+  <div class="container content " style="background-color: #eaf4ed; margin-bottom: 100px; border-radius: 16px; padding: 50px">
     <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
       <div class="heading-and-supporting-text">
         <h3 style="color: #153C1F; font-weight: 800; font-size: 30px;">Are you a teacher or student?</h3>
@@ -349,12 +346,12 @@
       </div>
       <div class="actions d-flex flex-wrap justify-content-between align-items-center">
         <div class="button-variant">
-          <a href="" class=" ml-md-2 mr-2 mb-2 mt-2 btn-learn" style="border-radius: var(--radius-radius, 4px);
+          <a href="{% url 'single_course' %}" class=" ml-md-2 mr-2 mb-2 mt-2 btn-learn" style="border-radius: var(--radius-radius, 4px);
           border: 1.5px solid #319049;
           background: rgba(224, 31, 38, 0.00); padding: 10px 24px;">Learn More</a>
         </div>
         <div class="ml-md-2 mt-2 mb-2">
-          <a href="" class=" text-white" style="
+          <a href="{% url 'login' %}" class=" text-white" style="
           padding: 10px 24px; border-radius: var(--radius-radius, 4px);
 background: #319049;">Get Started</a>
         </div>
@@ -468,7 +465,7 @@ background: #319049;">Get Started</a>
   </div>
   
   <!--  -->
-  <div class="container rounded mt-5" style="background-color: #EAF4ED; margin-bottom: 100px;">
+  <div class="container  mt-5" style="background-color: #EAF4ED; margin-bottom: 100px; border-radius: 16px; padding: 20px;">
     <div class="row align-items-center p-4">
       <div class="col-md-6">
         <div class="frame-parent">
@@ -480,7 +477,7 @@ background: #319049;">Get Started</a>
       </div>
       <div class="col-md-6 mt-3 mt-md-0 d-flex justify-content-md-end">
         <div class="button-variant">
-          <a href="" class="text-white" style="padding: 10px 24px;border-radius: var(--radius-radius-2, 8px);
+          <a href="{% url 'contact_us' %}" class="text-white" style="padding: 10px 24px;border-radius: var(--radius-radius-2, 8px);
             background: #319049;">Get in touch</a>
         </div>
       </div>
@@ -490,64 +487,66 @@ background: #319049;">Get Started</a>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>    
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- <script>
-             document.addEventListener("DOMContentLoaded", function() {
-          const metricItems = [
-            { number: '400+', text: 'Projects completed' },
-            { number: '600%', text: 'Return on investment' },
-            { number: '10k', text: 'Global downloads' },
-            { number: '200+', text: '5-star reviews' }
-          ];
-    
-          const metricItemsContainer = document.getElementById('metricItemsContainer');
-          let isAnimationTriggered = false;
-    
-          function addMetricItems() {
-            metricItems.forEach(item => {
-              const metricItem = document.createElement('h5');
-              metricItem.classList.add('col-6', 'col-md-12', 'col-lg-6', 'metric-item', 'hidden');
-    
-              const headingAndSubheading = document.createElement('div');
-              headingAndSubheading.classList.add('heading-and-subheading');
-    
-              const number = document.createElement('h5');
-              number.classList.add('number');
-              number.textContent = item.number;
-    
-              const text = document.createElement('h5');
-              text.classList.add('text');
-              text.textContent = item.text;
-    
-              headingAndSubheading.appendChild(number);
-              headingAndSubheading.appendChild(text);
-              metricItem.appendChild(headingAndSubheading);
-              metricItemsContainer.appendChild(metricItem);
-            });
-          }
-    
-          function animateMetricItems() {
-            const metricItems = document.querySelectorAll('.metric-item');
-    
-            metricItems.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.remove('hidden');
-              }, (index + 1) * 200);
-            });
-          }
-    
-          function handleScroll() {
-            const triggerHeight = metricItemsContainer.offsetTop - window.innerHeight;
-    
-            if (window.pageYOffset > triggerHeight && !isAnimationTriggered) {
-              animateMetricItems();
-              isAnimationTriggered = true;
-            }
-          }
-    
-          addMetricItems();
-          window.addEventListener('scroll', handleScroll);
-        });
-        </script> -->
+  <script>
+    function startCounters() {
+      const projectsCounter = document.getElementById('projectsCount');
+      const downloadsCounter = document.getElementById('downloadsCount');
+      const roiCounter = document.getElementById('roiCount');
+      const reviewsCounter = document.getElementById('reviewsCount');
+  
+      const finalProjectsCount = 400;
+      const finalDownloadsCount = 10;
+      const finalRoiCount = 600;
+      const finalReviewsCount = 200;
+  
+      let currentProjectsCount = 0;
+      let currentDownloadsCount = 0;
+      let currentRoiCount = 0;
+      let currentReviewsCount = 0;
+  
+      const increment = 1;
+      const intervalDuration = 50; // Adjust the interval duration for faster speed
+  
+      const projectsInterval = setInterval(() => {
+        if (currentProjectsCount < finalProjectsCount) {
+          currentProjectsCount += increment;
+          projectsCounter.textContent = currentProjectsCount + '+';
+        } else {
+          clearInterval(projectsInterval);
+        }
+      }, intervalDuration);
+  
+      const downloadsInterval = setInterval(() => {
+        if (currentDownloadsCount < finalDownloadsCount) {
+          currentDownloadsCount += increment;
+          downloadsCounter.textContent = currentDownloadsCount + 'K';
+        } else {
+          clearInterval(downloadsInterval);
+        }
+      }, intervalDuration);
+  
+      const roiInterval = setInterval(() => {
+        if (currentRoiCount < finalRoiCount) {
+          currentRoiCount += increment;
+          roiCounter.textContent = currentRoiCount + '%';
+        } else {
+          clearInterval(roiInterval);
+        }
+      }, intervalDuration);
+  
+      const reviewsInterval = setInterval(() => {
+        if (currentReviewsCount < finalReviewsCount) {
+          currentReviewsCount += increment;
+          reviewsCounter.textContent = currentReviewsCount + '+';
+        } else {
+          clearInterval(reviewsInterval);
+        }
+      }, intervalDuration);
+    }
+  
+    // Call the function to start the counters
+    startCounters();
+  </script>
   {% endblock %}
 
 {% endblock %}
