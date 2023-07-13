@@ -12,3 +12,4 @@ class SubscriptionForm(forms.ModelForm):
     class Meta:
         model = Subscriber
         fields = ['email']
+

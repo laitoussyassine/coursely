@@ -10,7 +10,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 
 from .settings import *
-import razorpay
 from time import time
 
 from django.shortcuts import render
@@ -18,10 +17,6 @@ from django.core.mail import send_mail
 from app.forms import SubscriptionForm,ReviewForm
 
 
- 
-
-
-# client = razorpay.Client(auth=(KEY_ID,KEY_SECRET))
 
 def BASE(request):
     return render(request,'base.html')
@@ -263,3 +258,14 @@ def add_review(request, course_id):
     }
     return render(request, 'course/course_details.html', context)
 
+
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success')  # Redirect to a success page
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})

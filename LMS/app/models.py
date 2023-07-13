@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
+
 # Create your models here.
 class Categories(models.Model):
     icon = models.CharField(max_length=200,null=True)
@@ -179,3 +180,7 @@ class Review(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+

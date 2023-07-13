@@ -11,54 +11,44 @@
     <!-- CONTACT
     ================================================== -->
     <div class="container my-12">
+        {% include 'components/msg.html' %}
         <div class="row">
             <div class="col-lg-6">
                 <h2>Get in Touch</h2>
                 <p>Our friendly team would love to hear from you.</p>
-                <form>
+                <form method="POST" action="{% url 'contact_us' %}">
+                    {% csrf_token %}
                     <div class="mb-3">
-                        <div class="d-flex ">
+                        <div class="d-flex">
                             <div class="me-4">
                                 <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="Enter your first name" required>
                             </div>
                             <div>
                                 <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Enter your last name" required>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <div class="input-group">
-                            <select class="form-select" id="countryCode">
-                                <option value="">Select Country Code</option>
-                                <option value="+1">+1</option>
-                                <option value="+44">+44</option>
-                                <option value="+61">+61</option>
-                                <!-- Add more options for different country codes -->
-                            </select>
-                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
-                        </div>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
                     </div>
                     <div class="my-5">
-                        <button type="submit" class="btn text-white  btn-block" style="background-color: #319049;">Send message</button>
+                        <button type="submit" class="btn text-white btn-block" style="background-color: #319049;">Send message</button>
                     </div>
-                </form> 
+                </form>
             </div>
             <div class="col-lg-6">
                 <img src="{% static 'assets/img/contact_Image.svg' %}" alt="Image" class="img-fluid" style="border-radius: 16px;">
             </div>
         </div>
     </div>
+    
     
 
 
